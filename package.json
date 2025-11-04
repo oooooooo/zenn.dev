@@ -1,0 +1,10 @@
+{
+  "name": "zenn.dev",
+  "description": "",
+  "version": "0.0.1",
+  "author": "oooooooo",
+  "license": "MIT",
+  "dependencies": {
+    "zenn-cli": "^0.2.9"
+  }
+}
