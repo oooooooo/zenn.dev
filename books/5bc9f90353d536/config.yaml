@@ -6,6 +6,7 @@ topics:
 published: false
 price: 0
 toc_depth: 3
+allow_override: true
 chapters:
   - "07de07"
   - "ae8cf2"
