@@ -1,0 +1,62 @@
+{
+  "title": "Half A Loaf Of Ruby",
+  "closed": true,
+  "archived": true,
+  "created_at": "2021-04-30",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2021-04-30",
+      "body_markdown": "## JSON を POST\n\nFaraday ベースに\n\n```ruby\nrequire 'json'\nrequire 'net/http'\n\ndef json_post(url, params)\n  uri = URI.parse(url)\n  http = Net::HTTP.new(uri.host, uri.port)\n  http.use_ssl = uri.scheme == 'https'\n\n  headers = { 'Content-Type' => 'application/json' }\n  http.post(url, params.to_json, headers)\nend\n\nurl = 'https://example.com'\nparams = { foo: 'bar' }\nresponse = json_post(url, params)\np response.code\np response.body\n```\n",
+      "body_updated_at": "2021-06-06"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-04-30",
+      "body_markdown": "## Hash の初期化\n\nh, k の rubocop 対応\n\n```ruby\nHash.new { |h, k| h[k] = [] }\nHash.new { |h, k| h[k] = Hash.new(0) }\n\nHash.new { |h, k| h[k] = Hash.new { |h, k| h[k] = [] } }\nHash.new { |h, k| h[k] = Hash.new { |h, k| h[k] = Hash.new(0) } }\n```\n\n",
+      "body_updated_at": "2021-06-06"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-04-30",
+      "body_markdown": "## rubocop\n\n### 自動修正\n\n```shell\n$ rubocop -a\n```\n\n## 抑止\n\n### 全体\n\n```yaml:.rubocop.yml\nAllCops:\n  NewCops: enable\n\nStyle/AsciiComments:\n  Enabled: false\n```\n\n#### コード内\n\n```ruby \n# rubocop:disable Metrics/AbcSize, Metrics/MethodLength\ndef foo\n  # 長いコード\nend\n# rubocop:enable all\n```\n\nhttps://docs.rubocop.org/rubocop/configuration.html",
+      "body_updated_at": "2021-04-30"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-04-30",
+      "body_markdown": "```ruby\n# frozen_string_literal: true\n```"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-10",
+      "body_markdown": "## CSV\n\n### 書き出し\n\n```ruby\nCSV.open(filename, 'w') do |csv|\n  csv << []\nend\n```\n\n### 読み込み\n\n```ruby\nCSV.foreach(filename) do |row|\nend\n```"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-10",
+      "body_markdown": "## パーセント記法\n\n```ruby\n%q(one two three) #=> \"one two three\"\n%Q(#{1 + 1}) #=> \"2\"\n\n%w(one two three) #=> ['one', 'two', 'three']\n%W(#{1 + 1}) # => [2]\n```\n"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-06-06",
+      "body_markdown": "## TODO\n\n- minitest\n  - https://www.rubydoc.info/gems/minitest/Minitest/Assertions\n- timecop\n  - DateTime 廃止 https://qiita.com/jnchito/items/cae89ee43c30f5d6fa2c\n  - Timecop.travel(2000, と直接かける )\n- strftime フォーマット\n- ruby で Active* 使う方法",
+      "body_updated_at": "2021-06-06"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-06-07",
+      "body_markdown": "## Gemfile\n\n```ruby\n# frozen_string_literal: true\n\nsource 'https://rubygems.org'\n\ngit_source(:github) { |repo_name| \"https://github.com/#{repo_name}\" }\n\ngem 'activerecord'\ngem 'activesupport'\ngem 'awesome_print'\ngem 'faraday'\ngem 'msteams-ruby-client'\ngem 'mysql2'\ngem 'twilio-ruby'\n\ngroup :development do\n  gem 'rubocop'\nend\n\ngroup :test do\n  gem 'minitest'\n  gem 'minitest-power_assert'\n  gem 'timecop'\n  gem 'vcr'\nend\n```"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-04-16",
+      "body_markdown": "## ファイルを一気に読む\n```\nfile = File.open(filename).read\n```\n\n"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-06-05",
+      "body_markdown": "## ActiveRecord の結果をハッシュに入れる\n```ruby\nItem.all.index_by(&:id)\n```"
+    }
+  ]
+}

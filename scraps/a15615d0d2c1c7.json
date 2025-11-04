@@ -1,0 +1,13 @@
+{
+  "title": "Ruby で ActiveRecord を使う",
+  "closed": true,
+  "archived": true,
+  "created_at": "2022-06-02",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-06-02",
+      "body_markdown": "## SQL 直接実行\n```ruby\nActiveRecord::Base.connection.execute(sql)\n```"
+    }
+  ]
+}

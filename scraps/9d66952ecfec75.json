@@ -1,0 +1,13 @@
+{
+  "title": "lint",
+  "closed": true,
+  "archived": true,
+  "created_at": "2022-08-29",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-08-29",
+      "body_markdown": "## テキスト校正くん\n\nics-creative/project-japanese-proofreading: テキストファイルやMarkdownファイルの日本語の文章をチェックするVS Codeの拡張機能\nhttps://github.com/ics-creative/project-japanese-proofreading\n"
+    }
+  ]
+}

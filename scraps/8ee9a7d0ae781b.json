@@ -1,0 +1,34 @@
+{
+  "title": "AWS メモ",
+  "closed": true,
+  "archived": true,
+  "created_at": "2021-05-01",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-01",
+      "body_markdown": "https://aws.amazon.com/jp/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc\n> AWS Well-Architected は、クラウドアーキテクトがアプリケーションやワークロード向けに高い安全性、性能、障害耐性、効率性を備えたインフラストラクチャを構築する際に役立ちます。AWS Well-Architected では、5 つの柱（優れた運用効率、セキュリティ、信頼性、パフォーマンス効率、コストの最適化）に基づいて、お客様とパートナーがアーキテクチャを評価し、時間と共に拡大できる設計を実装するための一貫したアプローチを提供しています。",
+      "body_updated_at": "2021-05-01"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-01",
+      "body_markdown": "https://aws.amazon.com/jp/blogs/startup/tag/%E9%80%B1%E5%88%8A-ask-an-expert/"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-01",
+      "body_markdown": "https://aws.amazon.com/jp/premiumsupport/tech-support-guidelines/"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-02",
+      "body_markdown": "https://aws.amazon.com/jp/aws-jp-introduction/aws-jp-webinar-hands-on/?trk=aws_blog"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-02",
+      "body_markdown": "https://tomomano.gitlab.io/intro-aws/#_%E6%9C%AC%E8%AC%9B%E7%BE%A9%E3%81%AE%E7%9B%AE%E7%9A%84%E5%86%85%E5%AE%B9"
+    }
+  ]
+}

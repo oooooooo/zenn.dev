@@ -1,0 +1,14 @@
+{
+  "title": "Ruby 3 で Sinatra を使う",
+  "closed": false,
+  "archived": false,
+  "created_at": "2021-04-30",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2021-04-30",
+      "body_markdown": "[ブラウザの拡張](http://livereload.com/extensions/) を入れておけばファイル更新されることでブラウザが自動更新される。\n\n```ruby:Gemfile\n# frozen_string_literal: true\n\nsource 'https://rubygems.org'\n\ngem 'puma'\ngem 'erubis'\ngem 'sinatra'\ngem 'sinatra-contrib'\ngroup :development, :test do\n  gem 'guard-livereload', require: false\n  gem 'rerun'\nend\n```\n\n\n```ruby:Guardfile\n# frozen_string_literal: true\n\nguard 'livereload' do\n  watch(%r{views/.+\\.(erb|haml|slim)})\n  watch(%r{.+\\.rb})\nend\n```\n\n```ruby:app.rb\n# frozen_string_literal: true\n\nrequire 'sinatra'\nrequire 'sinatra/reloader'\n\nset :port, 3000\nset :bind, '0.0.0.0'\nset :erb, escape_html: true\n\nget '/' do\n  'Hello world'\nend\n```\n\n```shell\n# 開発環境\n$ bundle exec guard -i &\n$ rerun ruby app.rb\n# 本番環境\n$ nohup ruby app.rb &\n```\n",
+      "body_updated_at": "2022-04-22"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Python の STDIN 周り",
+  "closed": false,
+  "archived": false,
+  "created_at": "2022-11-18",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-11-18",
+      "body_markdown": "## STDIN 有無判定\n\n```python:stdin.py\nimport sys\nif sys.stdin.isatty():\n    print('no stdin')\nelse:\n    for line in sys.stdin:\n        print(line, end='')\n```\n\n## 外部プログラムに Python から STDIN を渡す\n\n```python\nimport subprocess\ndata = 'a' * 10000000\nsubprocess.run(['python', 'stdin.py'], input=data.encode())\n```\n\n"
+    }
+  ]
+}

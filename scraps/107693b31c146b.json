@@ -1,0 +1,13 @@
+{
+  "title": "各種 lint と ignore",
+  "closed": false,
+  "archived": false,
+  "created_at": "2022-08-31",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-08-31",
+      "body_markdown": "## CSpell\n\n```text\n// cSpell:ignore zaallano, wooorrdd\n```\n\n[cspell - npm](https://www.npmjs.com/package/cspell)\n"
+    }
+  ]
+}

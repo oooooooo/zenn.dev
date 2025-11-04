@@ -1,0 +1,14 @@
+{
+  "title": "バグ報告まとめ",
+  "closed": true,
+  "archived": true,
+  "created_at": "2021-05-02",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-02",
+      "body_markdown": "自分もうっかり「画面が出ない」なんて言ってしまうことがある。\n\n「画面が出ない」って画面が真っ黒や真っ白、デザイン崩れ、描画がいつもより遅い、404 や 500、エラーメッセージが出ている、ログインできないときにも使われる曖昧な言葉。\n\n画面はスクショをもらうのが一番いいんだけど、スクショも URL やエラーメッセージのない部分を巧妙に切り取ってくれたりする。\n\nバグ報告が上手な人もいれば、何年経っても「動かない」レベルの人もいる。報告フォームで必須入力の「症状」に「動かない」、「望ましい動作」に「動くようになること」を書くタイプ。\n\n\n- タイトル\n- 問題点、事象\n- 期待する動作\n  - 事実と憶測に分ける\n- Web 関連なら\n  - URL\n  - OS とブラウザの種類とバージョン情報\n  - console.log\n  - HAR\n- 再現手順\n  - 再現できない場合は頻度。例えば一回だけ、三回に一回、日に三回など\n- エラーメッセージ\n- スクリーンショット\n  - 切り取らず画面全体\n\n## 資料\n\n- [技術的なお問い合わせに関するガイドライン | AWS サポート](https://aws.amazon.com/jp/premiumsupport/tech-support-guidelines/)\n- [効果的にバグを報告するには](https://www.chiark.greenend.org.uk/~sgtatham/bugs-jp.html)\n- [伝わるバグ報告 | さくらのナレッジ](https://knowledge.sakura.ad.jp/26627/)\n- [バグを報告するとき気をつけてほしいこと - Qiita](https://qiita.com/ryo_mm2d/items/9b449aca797821ec8ae8)\n- [ウェブ技術者がもらってうれしいバグ報告書のテンプレート | Dyno](https://dyno.design/articles/bug-reports-kind-for-web-developers/)\n\n\n",
+      "body_updated_at": "2021-05-02"
+    }
+  ]
+}

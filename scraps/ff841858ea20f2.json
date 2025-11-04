@@ -1,0 +1,14 @@
+{
+  "title": "HTML 生成",
+  "closed": true,
+  "archived": true,
+  "created_at": "2022-08-30",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-08-30",
+      "body_markdown": "```js\nconst element = document.createElement('a') //=> <a></a>\nelement.innerHTML = 'hello' //=> <a>hello</a>\nelement.textContent = 'helo' //=> <a>hello</a>\nelement.href = '#'\nelement.outerHTML //=> '<a href=\"#\">helo</a>'\n```\n\n[Document.createElement() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)\n\n[node-html-parser - npm](https://www.npmjs.com/package/node-html-parser) もある\n\nattribute を取り出す正規表現。複数あると値の前後に [\"'] が付く\nhtml - Regular expression for extracting tag attributes - Stack Overflow\nhttps://stackoverflow.com/questions/317053/regular-expression-for-extracting-tag-attributes",
+      "body_updated_at": "2022-08-31"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Electron 初挑戦メモ",
+  "closed": false,
+  "archived": false,
+  "created_at": "2022-11-18",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2022-11-18",
+      "body_markdown": "## Quick Start\n\n### 起動\n\n```shell\n$ git clone https://github.com/electron/electron-quick-start\n$ cd electron-quick-start\n$ npm install --platform=win32\n# 下記エラーが出たので --no-sandbox 追加\n# FATAL:gpu_data_manager_impl_private.cc(441)] GPU process isn't usable. Goodbye.\n# https://github.com/Automattic/simplenote-electron/issues/3096\n$ npm start -- --platform=win32 --no-sandbox\n```\n\nhttps://www.electronjs.org/docs/latest/tutorial/quick-start\nhttps://github.com/electron/electron-quick-start\nhttps://www.electronforge.io/guides/developing-with-wsl\n\nelectron-quick-start は index.html と render.js のボイラープレート\n\n### 配布バイナリ作成\n\nWindows 用に配布バイナリ作成。\n\n```shell\n$ ./node_modules/.bin/electron-builder -w\n$ chmod +x dist/electron-quick-start\\ Setup\\ 1.0.0.exe\n$ ./dist/electron-quick-start\\ Setup\\ 1.0.0.exe\n```\n\nインストール先は下記。デスクトップにアイコンが作られる\n\n> C:\\Users\\[user]\\AppData\\Local\\Programs\\electron-quick-start\\electron-quick-start.exe\n\n「アプリの一覧」からアンインストール可能\n\nhttps://www.electron.build/\n",
+      "body_updated_at": "2022-11-18"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-11-18",
+      "body_markdown": "## Uncaught ReferenceError: require is not defined\n\nレンダー側はセキュリティ上の理由でデフォルトでは require() が使えない\n安全に使うには preload.js を利用\n\nhttps://www.electronjs.org/docs/latest/tutorial/tutorial-preload\nhttps://qiita.com/nomuyoshi/items/9091abd9dc3b05c85f44",
+      "body_updated_at": "2022-11-18"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-11-18",
+      "body_markdown": "## 作り込み\n\n### 前回終了時のウィンドウ位置やサイズを復元\n\nhttps://medium.com/@hql287/persisting-windows-state-in-electron-using-javascript-closure-17fc0821d37\nhttps://github.com/electron/electron/issues/526\n\n## Forge vs. Builder\n\nElectron 公式は Electron Forge 推し\nどっちがいいか比較＆検討する\n\nhttps://www.electronforge.io/core-concepts/why-electron-forge\nhttps://www.reddit.com/r/electronjs/comments/pek7d5/electronbuilder_vs_electronforge/\nhttps://github.com/electron-userland/electron-builder/issues/1193",
+      "body_updated_at": "2022-11-18"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-12-04",
+      "body_markdown": "app.asar から不要ファイルを取り除く\n.gitignore は除外されるけど、README.md や .vscode などが含まれるのを除外"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-12-04",
+      "body_markdown": "electron-builders でカレントディレクトリの取得\nWindows のポータブルの場合\nMac の場合\n"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2022-12-04",
+      "body_markdown": "ipc の安全な使い方"
+    }
+  ]
+}

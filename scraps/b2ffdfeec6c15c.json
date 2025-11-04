@@ -1,0 +1,19 @@
+{
+  "title": "rbenv で ruby をインストール",
+  "closed": true,
+  "archived": true,
+  "created_at": "2021-05-01",
+  "comments": [
+    {
+      "author": "oooooooo",
+      "created_at": "2021-05-01",
+      "body_markdown": "apt/yum は古いので git で入れるのがお勧め。\n\n```\n$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv\n$ mkdir -p \"$(rbenv root)\"/plugins\n$ git clone https://github.com/rbenv/ruby-build.git \"$(rbenv root)\"/plugins/ruby-build\n```\n\n\n下記 rbenv-gem-rehash がないと bundle で gem を入れた後に rbenv rehash しないといけない。それが不要になる。自分が作者ならこの 3 つは標準で入れる。\n\n```shell\n$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash\n```\n\nbash なら下記を追加。\n\n```shell:.bash_profile\nexport PATH=\"$HOME/.rbenv/bin:$PATH\"\neval \"$(rbenv init -)\"\n```\n\nインストール方法の正しい方法は下記。\nhttps://github.com/rbenv/rbenv\n\nインストール可能な Ruby は下記で確認。\n\n```shell\n$ rbenv install --list\n2.6.7\n2.7.3\n3.0.1\njruby-9.2.17.0\nmruby-3.0.0\nrbx-5.0\ntruffleruby-21.1.0\ntruffleruby+graalvm-21.1.0\n```\n\n出てくるバージョンが古いなら ruby-build を更新。\n\n```shell\n$ cd ~/.rbenv/plugins/ruby-build/\n$ git pull\n```\n\nバージョンを指定してインストール。MAKE_OPTS はコンパイル時の並列処理数。\n\n```shell\n$ MAKE_OPTS=\"-j 4\" rbenv install -v 3.0.1\n```",
+      "body_updated_at": "2021-05-01"
+    },
+    {
+      "author": "oooooooo",
+      "created_at": "2025-04-21",
+      "body_markdown": "今は mise を使っている"
+    }
+  ]
+}
